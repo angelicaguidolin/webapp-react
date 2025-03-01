@@ -1,3 +1,13 @@
+import axios from '../api/axios';
+import { useEffect } from 'react';
 export default function HomePage(){
-    return (<h1>QUESTA È LA HOME</h1>)
+    const fetchMovie=()=>{
+        axios.get("/movie").then((res)=>{
+            console.log(res)
+        })
+    }
+    useEffect(fetchMovie, [])
+    return(
+        <h1>QUESTA È LA HOME</h1>
+    )
 }
