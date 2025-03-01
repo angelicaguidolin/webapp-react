@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 export default function HomePage(){
     const fetchMovie=()=>{
         axios.get("/movie").then((res)=>{
-            console.log(res)
+            console.log(res.data)
         })
     }
     useEffect(fetchMovie, [])
